@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="checkbox.css">
+    <!-- FavIcon -->
+    <link rel="icon" href="assets/img/favicon.png">
+    <!-- Font Icons -->
+    <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+    <title>Personalized Workout Program</title>
+</head>
+
+<body style="background-color: #121212;">
+    <div class="row no-pad right-menu">
+        <div class="col-9"></div>
+        <div class="col-md-3 right menu-1">
+            <div class="row p-4 justify-content-end">
+                <a href="#" class="close-menu"><i class="lni lni-close"></i></a>
+            </div>
+            <div class="row p-4">
+                <a href="#" class="btn_between"><span>Terms & Policies</span><i class="lni lni-chevron-right"></i></a>
+                <div class="divider"></div>
+                <a href="contact.html" class="btn_between"><span>Contact</span></a>
+                <div class="divider"></div>
+                <div class="bg-black">
+                    <span>Any questions? We're here to help.</span>
+                </div>
+                <a href="#" class="btn_between text-underline"><span><i
+                            class="lni lni-envelope"></i>&nbsp;<u>support@madmuscles.com</u></span></a>
+            </div>
+        </div>
+        <div class="col-md-3 right menu-2 hidden">
+            <div class="row p-4 justify-content-between">
+                <a href="#" class="back-menu"><i class="lni lni-chevron-left"></i></a>
+                <span>Terms & Policies</span>
+                <a href="#" class="close-menu"><i class="lni lni-close"></i></a>
+            </div>
+            <div class="row p-4 sub_menu">
+                <a href="privacy.html" class="btn_between"><span>Privacy policy<span></a>
+                <div class="divider"></div>
+                <a href="terms.html" class="btn_between"><span>Terms of service<span></a>
+                <div class="divider"></div>
+                <a href="refund.html" class="btn_between"><span>Refund policy<span></a>
+                <div class="divider"></div>
+                <a href="subscription.html" class="btn_between"><span>Subscription Terms<span></a>
+                <div class="divider"></div>
+                <a href="cookie.html" class="btn_between"><span>Cookie policy<span></a>
+                <div class="divider"></div>
+                <a href="information.html" class="btn_between"><span>Do Not Sell My Personal Information<span></a>
+                <div class="divider"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row justify-content-between p-4">
+            <a href="/" class="logo"><img src="assets/img/logo.svg" alt=""></a>
+            <div class="menu">
+                <a href="#">English</a>
+                <a class="btn_menu" href="#"><i class="lni lni-menu"></i></a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row align-items-center" style="height: 90vh;">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <h2 class="sub_heading">We're here to help you</h2>
+                        </div>
+                        <div class="row ready">
+                            <span class="lni lni-alarm-clock text-white"></span><span>Your workout and meal plan are
+                                almost
+                                ready!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row mt-5">
+                    <div class="col-md-12">
+                        <div class="form-group mt-2">
+                            <label for="">Name</label>
+                            <input type="text" class="input-control" placeholder="Name">
+                        </div>
+                        <div class="form-group mt-2">
+                            <label for="">Email</label>
+                            <input type="text" class="input-control" placeholder="Email">
+                        </div>
+                        <div class="form-group mt-2">
+                            <label for="">Type of inquiry</label>
+                            <input type="text" class="input-control" placeholder="Name">
+                        </div>
+                        <div class="form-group mt-2">
+                            <label for="">Your question</label>
+                            <textarea name="" id="" class="input-control" rows="3"></textarea>
+                        </div>
+                        <div class="row mt-4 justify-content-end">
+                            <a href="#" class="btn_account">Send&nbsp;&nbsp;<i class="lni lni-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+             $('.btn_between').click(function (e) {
+                // e.preventDefault();
+                $('.menu-1').addClass('hidden');
+                $('.menu-2').removeClass('hidden');
+            })
+
+            $('.back-menu').click(function (e) {
+                // e.preventDefault();
+                $('.menu-1').removeClass('hidden');
+                $('.menu-2').addClass('hidden');
+            })
+            $('.btn_menu').click(function (e) {
+                e.preventDefault();
+                $('.right-menu').fadeIn('slow').css('display', 'flex');
+            })
+            $('.close-menu').click(function (e) {
+                e.preventDefault();
+                $('.right-menu').fadeOut('slow');
+            })
+
+        })
+    </script>
+</body>
+
+</html>

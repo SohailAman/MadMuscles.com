@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="checkbox.css">
+    <!-- FavIcon -->
+    <link rel="icon" href="assets/img/favicon.png">
+    <!-- Font Icons -->
+    <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+    <title>Personalized Workout Program</title>
+</head>
+
+<body class="bg-table">
+    <div class="row no-pad right-menu result-page-menus">
+        <div class="col-9"></div>
+        <div class="col-md-3 right menu-1">
+            <div class="row p-4 justify-content-end">
+                <a href="#" class="close-menu"><i class="lni lni-close"></i></a>
+            </div>
+            <div class="row p-4">
+                <a href="#" class="btn_between"><span>Terms & Policies</span><i class="lni lni-chevron-right"></i></a>
+                <div class="divider"></div>
+                <a href="contact.html" class="btn_between"><span>Contact</span></a>
+                <div class="divider"></div>
+                <div class="bg-black">
+                    <span>Any questions? We're here to help.</span>
+                </div>
+                <a href="#" class="btn_between text-underline"><span><i
+                            class="lni lni-envelope"></i>&nbsp;<u>support@madmuscles.com</u></span></a>
+            </div>
+        </div>
+        <div class="col-md-3 right menu-2 hidden">
+            <div class="row p-4 justify-content-between">
+                <a href="#" class="back-menu"><i class="lni lni-chevron-left"></i></a>
+                <span>Terms & Policies</span>
+                <a href="#" class="close-menu"><i class="lni lni-close"></i></a>
+            </div>
+            <div class="row p-4 sub_menu">
+                <a href="privacy.html" class="btn_between"><span>Privacy policy<span></a>
+                <div class="divider"></div>
+                <a href="terms.html" class="btn_between"><span>Terms of service<span></a>
+                <div class="divider"></div>
+                <a href="refund.html" class="btn_between"><span>Refund policy<span></a>
+                <div class="divider"></div>
+                <a href="subscription.html" class="btn_between"><span>Subscription Terms<span></a>
+                <div class="divider"></div>
+                <a href="cookie.html" class="btn_between"><span>Cookie policy<span></a>
+                <div class="divider"></div>
+                <a href="information.html" class="btn_between"><span>Do Not Sell My Personal Information<span></a>
+                <div class="divider"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Header -->
+    <div class="container-fluid result-page-header">
+        <div class="row justify-content-between p-4">
+            <a href="/" class="logo"><img src="assets/img/logo.svg" alt=""></a>
+            <div class="menu">
+                <a href="#">English</a>
+                <a class="btn_menu" href="#"><i class="lni lni-menu"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- Transformation Section -->
+    <section class="tranformation">
+        <div class="transf-container">
+            <div class="transf-body-container">
+                <div class="bodies-img-wrap">
+                    <div class="body-img">
+                        <img src="./assets/img/RESULT_IMG (1).webp" alt="">
+                    </div>
+                    <div class="body-img">
+                        <img src="./assets/img/RESULT_SLIM_SHREDDED_BODY (2).webp" alt="">
+                    </div>
+                </div>
+                <div class="arrow-img">
+                    <img src="./assets/img/arrows_img.png" alt="">
+                </div>
+            </div>
+            <div class="transf-diff-container">
+                <div class="diff-header">
+                    <span>
+                        Now
+                    </span>
+                    <span>6 months</span>
+                </div>
+                <div class="diff-body">
+                    <div class="diff-left">
+                        <div>
+                            <span class="fats">Body fat</span>
+                            <span class="percentage">20-24%</span>
+                            <p class="muscles-txt">Body muscles</p>
+                            <div class="muscles-lines">
+                                <div class="bar-lines bar-lines-bg-2"></div>
+                                <div class="bar-lines bar-lines-bg-1"></div>
+                                <div class="bar-lines bar-lines-bg-1"></div>
+                                <div class="bar-lines bar-lines-bg-1"></div>
+                                <div class="bar-lines bar-lines-bg-1"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="diff-right">
+                        <span class="fats">Body fat</span>
+                        <span class="percentage">20-24%</span>
+                        <p class="muscles-txt">Body muscles</p>
+                        <div class="muscles-lines">
+                            <div class="bar-lines bar-lines-bg-2"></div>
+                            <div class="bar-lines bar-lines-bg-2"></div>
+                            <div class="bar-lines bar-lines-bg-2"></div>
+                            <div class="bar-lines bar-lines-bg-2"></div>
+                            <div class="bar-lines bar-lines-bg-1"></div>
+                        </div>
+                    </div>
+                </div>
+                <p class="note-txt">*The image is not intended to represent the user. Results vary per person and are
+                    not guaranteed.s</p>
+            </div>
+        </div>
+    </section>
+    <!-- Summary Section -->
+    <section class="summary">
+        <div class="summary-container">
+            <h1 class="summary-heading">Personal summary based on your answers</h1>
+            <div class="summary-wrap">
+                <div class="summary-head-wrap">
+                    <p>Current BMI</p>
+                    <img src="./assets/img/Info.png" alt="">
+                </div>
+                <span class="bmi-heading">23.89 BMI</span>
+                <div class="summary-gradient-wrap">
+                    <div class="summary-gradient-line"></div>
+                    <img src="./assets/img/triangle.svg" alt="">
+                    <div class="summary-gradient-line-txt">
+                        <span>Underweight</span>
+                        <span>Obese</span>
+                    </div>
+                    <div class="slighty-txt-wrap">
+                        <p>Slightly Overweight</p>
+                        <p>The body mass index (BMI) is a measure that uses your height and
+                            weight to work out
+                            if your weight is healthy.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="calories-wrap">
+                <div class="calories-left">
+                    <span class="recommend">recommended</span>
+                    <div class="food">
+                        <div class="burger-icon-wrap">🍔</div>
+                        <div class="food-txt">
+                            <p class="">Daily calorie intake</p>
+                            <div class="kcal"><span>2121 kcal</span> </div>
+                        </div>
+                    </div>
+                    <div class="food-gradient-wrap">
+                        <div class="food-gradient-line"></div>
+                        <div class="gradient-slider-btn"></div>
+                        <div class="food-gradient-txt">
+                            <span>1000 kcal</span>
+                            <span>5000 kcal</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="calories-left">
+                    <span class="recommend">recommended</span>
+                    <div class="food">
+                        <div class="burger-icon-wrap">💧</div>
+                        <div class="food-txt">
+                            <p class="">Daily water intake</p>
+                            <div class="kcal"><span>2.5 l</span> </div>
+                        </div>
+                    </div>
+                    <div class="water-wrap">
+                        <div><img src="./assets/img/water_glass.svg" alt=""></div>
+                        <div><img src="./assets/img/water_glass.svg" alt=""></div>
+                        <div><img src="./assets/img/water_glass.svg" alt=""></div>
+                        <div><img src="./assets/img/water_glass.svg" alt=""></div>
+                        <div><img src="./assets/img/water_glass.svg" alt=""></div>
+                        <div><img src="./assets/img/water_glass.svg" alt=""></div>
+                        <div><img src="./assets/img/water_glass_empty.svg" alt=""></div>
+                        <div><img src="./assets/img/water_glass_empty.svg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Shredded plan Section -->
+    <section class="shred-plan">
+        <div class="shred-container">
+            <h1>
+                <h1 class="shred-heading">Shredded plan for test is <b>ready!</b></h1>
+            </h1>
+            <ul class="shred-grid">
+                <li>
+                    <div class="shred-icons">🎯</div>
+                    <div class="shred-txt">
+                        <p>Goal</p>
+                        <p>Lose Weight</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="shred-icons">⏳</div>
+                    <div class="shred-txt">
+                        <p>Workout Duration</p>
+                        <p>1 hour</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="shred-icons">💪</div>
+                    <div class="shred-txt">
+                        <p>Fitness Level</p>
+                        <p>Intermediate</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="shred-icons">👟</div>
+                    <div class="shred-txt">
+                        <p>Place to Workout</p>
+                        <p>Gym</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="shred-grid-2">
+                <div class="shred-card">
+                    <div class="shred-icons">📆</div>
+                    <div class="shred-txt">
+                        <p>Workout Frequency</p>
+                        <p class="txt-orange">3 times per week</p>
+                    </div>
+                </div>
+            </div>
+            <div class="shred-goals">
+                <h2>Goals for the next 6 months also include:</h2>
+                <ul class="shred-goals-list">
+                    <li>
+                        <i class="lni lni-checkmark-circle"></i>
+                        <p>Better sleep</p>
+                    </li>
+                    <li>
+                        <i class="lni lni-checkmark-circle"></i>
+                        <p>Feel more alive</p>
+                    </li>
+                    <li>
+                        <i class="lni lni-checkmark-circle"></i>
+                        <p>Develop healthy habits</p>
+                    </li>
+                    <li>
+                        <i class="lni lni-checkmark-circle"></i>
+                        <p>Improve sex drive</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="get-benefits">
+        <h1 class="benefit-heading">What you get:</h1>
+        <div class="get-container">
+            <div class="benefits-container">
+                <div class="benefits-left">
+                    <div class="benefit">
+                        <img src="./assets/img/benefit_img.svg" alt="">
+                        <p class="personalize-txt">Personalized workout program</p>
+                    </div>
+                    <div class="benefit">
+                        <img src="./assets/img/benefit_img-2.svg" alt="">
+                        <p class="personalize-txt">Clear and easy to follow workout plan</p>
+                    </div>
+                    <div class="benefit">
+                        <img src="./assets/img/benefit_img_3.svg" alt="">
+                        <p class="personalize-txt">Visible results after first month</p>
+                    </div>
+                    <div class="benefit">
+                        <img src="./assets/img/benefits_img_4.svg" alt="">
+                        <p class="personalize-txt">Progress tracking and analysis</p>
+                    </div>
+                </div>
+                <div class="benefits-right">
+                    <img src="./assets/img/Mockup-mobile.png" alt="">
+                    <img src="./assets/img/2mobile.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="video-heading-main">
+        <h1>Start reaching your goals with our workouts</h1>
+        <p>Try exercises designed to help you build your dream body. Each workout combines different training according
+            to your
+            level and problem areas.</p>
+    </div>
+    <div class="youtube-vid-wrap">
+        <div class="video-container">
+            <iframe width="646" height="363" src="https://www.youtube.com/embed/sM7tdlFGpUA" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope;" allowfullscreen></iframe>
+        </div>
+    </div>
+    <a class="get-plan-btn" href="#">
+        <span>Get my plan</span>
+        <span><i class="lni lni-arrow-right"></i></span>
+    </a>
+    <!-- Follow Us Section -->
+    <section class="socials">
+        <div class="workout-container">
+            <span class="workout-text">Full workout plan</span>
+            <ul class="">
+                <li><span>☑️</span>
+                    <p>Build a habit &amp; form correct exercising
+                        techniques
+                    </p>
+                </li>
+                <li><span>☑️</span>
+                    <p>Lose excessive body fat &amp; improve workout
+                        intensity
+                    </p>
+                </li>
+                <li><span>☑️</span>
+                    <p>Achieve your goal and change your life
+                        forever</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- Plans Section -->
+    <section class="plans">
+        <div class="plan-container">
+            <div class="plans-wrap">
+                <div class="plan-img-left">
+                    <div class="plan-img-wrap">
+                        <img src="./assets/img/CROSS_FIT_BODY_PLAN.webp" alt="">
+                    </div>
+                </div>
+                <div class="plan-select-right">
+                    <h2>Choose the best plan for you</h2>
+                    <div class="input-pack">
+                        <div class="checkbox-box">
+                            <div class="check-left">
+                                <input name="plan" type="radio" class="radio">
+                                <div class="plan-duration">
+                                    <p>6-MONTH PLAN</p>
+                                    <div class="price-disc">
+                                        <span><del>59.99 USD</del></span>
+                                        <span>49.99 USD</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="check-right">
+                                <p class="price">0.33 USD</p>
+                                <p class="day">per day</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popular-plan">
+                        <div class="input-pack">
+                            <div class="checkbox-box">
+                                <div class="check-left">
+                                    <input name="plan" type="radio" class="radio">
+                                    <div class="plan-duration">
+                                        <p>3-MONTH PLAN</p>
+                                        <div class="price-disc">
+                                            <span><del>59.99 USD</del></span>
+                                            <span>49.99 USD</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="check-right">
+                                    <p class="price">0.54 USD</p>
+                                    <p class="day">per day</p>
+                                </div>
+                            </div>
+                            <div class="popular">
+                                <p> MOST POPULAR</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="input-pack">
+                        <div class="checkbox-box">
+                            <div class="check-left">
+                                <input name="plan" type="radio" class="radio">
+                                <div class="plan-duration">
+                                    <p>3-MONTH PLAN</p>
+                                    <div class="price-disc">
+                                        <span><del>59.99 USD</del></span>
+                                        <span>49.99 USD</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="check-right">
+                                <p class="price">0.54 USD</p>
+                                <p class="day">per day</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="continue-plan">
+                        <a href="#" class="continue-btn"><span>Continue</span><i class="lni lni-arrow-right"></i></a>
+                    </div>
+                    <div class="term-condition-wrap">
+                        <p>By continuing, you agree that if you don't cancel at least 24 hours prior to the end of the
+                            3-month introductory offer,
+                            you will automatically be charged the full price of 49.99 USD every 3 months until you
+                            cancel in settings. Learn more
+                            about our cancellation and refund policy in <a href="#"> Subscription Terms</a></p>
+                        <p>By continuing, I agree with <a href="#"> Terms of service</a>,<a href="#"> Privacy
+                                policy</a>,<a href="#"> Refund policy</a>, <a href="#">Subscription
+                                Terms</a>, <a href="#">Cookie policy</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- Guarantee Section -->
+    <section id="guarantee">
+        <div class="guarantee-main-wrap">
+            <div class="guarantee-txt-wrap">
+                <h3>Money-Back Guarantee</h3>
+                <p>We believe that our plan may work for you and you’ll get visible results in 4 weeks! We are even
+                    ready to completely
+                    refund you within 30 days after purchase if you don’t get visible results and can demonstrate that
+                    you have followed our
+                    plan.</p>
+                <p>Find out more about the applicable limitations in our <a href="#"> money-back policy</a></p>
+            </div>
+            <div class="guarantee-logo-wrap">
+                <img src="./assets/img/guarantee.svg" alt="guarantee">
+            </div>
+        </div>
+    </section>
+    <!-- Testimonial Section -->
+    <section id="testimonial">
+        <h3 class="testimonial-head-sm">We helped over </h3>
+        <h1 class="testimonial-head-lg">85000+ people</h1>
+        <p class="testimonial-para-sm">to achieve their dream physique</p>
+        <div class="testimonial-container">
+            <div class="testimonial-main-wrap">
+                <div class="testimonial-body">
+                    <div class="testimonial-head">
+                        <div class="profile-pic">
+                            <img src="./assets/img/profile-img-1.webp" alt="">
+                            <span>Ahmad Adyarso</span>
+                        </div>
+                        <div class="stars-rating-wrap">
+                            <i class="lni lni-star-filled"></i>
+                            <i class="lni lni-star-filled"></i>
+                            <i class="lni lni-star-filled"></i>
+                            <i class="lni lni-star-filled"></i>
+                            <i class="lni lni-star-filled"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-feedback">
+                        <p>I tried the program for a week; it has decent features, a good workout plan, and a diet. The
+                            diet
+                            plan also has a
+                            grocery list and step-by-step preparation.</p>
+                    </div>
+                </div>
+                <div class="testimonial-body">
+                    <div class="testimonial-head">
+                        <div class="profile-pic">
+                            <img src="./assets/img/profile-img-2.webp" alt="">
+                            <span>Robin Mersh</span>
+                        </div>
+                        <div class="stars-rating-wrap">
+                            <i class="lni lni-star-filled"></i>
+                            <i class="lni lni-star-filled"></i>
+                            <i class="lni lni-star-filled"></i>
+                            <i class="lni lni-star-filled"></i>
+                            <i class="lni lni-star-filled"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-feedback">
+                        <p>Nice program, works well, and contains a good, well thought out set of exercises</p>
+                    </div>
+                </div>
+                <div class="testimonial-body">
+                    <div class="testimonial-head">
+                        <div class="profile-pic">
+                            <img src="./assets/img/profile-img-3.webp" alt="">
+                            <span>Chan Makuach</span>
+                        </div>
+                        <div class="stars-rating-wrap">
+                            <i class="lni lni-star-filled"></i>
+                            <i class="lni lni-star-filled"></i>
+                            <i class="lni lni-star-filled"></i>
+                            <i class="lni lni-star-filled"></i>
+                            <i class="lni lni-star-filled"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-feedback">
+                        <p>The plan is good, I like how it evaluates a proper workouts according to fitness but it would
+                            be great if there's an
+                            offline mode</p>
+                    </div>
+                </div>
+                <div class="testimonial-body">
+                    <div class="testimonial-head">
+                        <div class="profile-pic">
+                            <img src="./assets/img/profile-img-4.webp" alt="">
+                            <span>Chee-T'ah-Ah</span>
+                        </div>
+                        <div class="stars-rating-wrap">
+                            <i class="lni lni-star-filled"></i>
+                            <i class="lni lni-star-filled"></i>
+                            <i class="lni lni-star-filled"></i>
+                            <i class="lni lni-star-filled"></i>
+                            <i class="lni lni-star-filled"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-feedback">
+                        <p>This is a really wonderful program that has helped me lose 5 pounds in a week</p>
+                    </div>
+                </div>
+                <div class="testimonial-body">
+                    <div class="testimonial-head">
+                        <div class="profile-pic">
+                            <img src="./assets/img/profile-img-5.webp" alt="">
+                            <span>Robert Mathews</span>
+                        </div>
+                        <div class="stars-rating-wrap">
+                            <i class="lni lni-star-filled"></i>
+                            <i class="lni lni-star-filled"></i>
+                            <i class="lni lni-star-filled"></i>
+                            <i class="lni lni-star-filled"></i>
+                            <i class="lni lni-star-filled"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-feedback">
+                        <p>It's a great way to get into shape. should have done it a long time ago 😃</p>
+                    </div>
+                </div>
+                <div class="testimonial-body">
+                    <div class="testimonial-head">
+                        <div class="profile-pic">
+                            <img src="./assets/img/profile-img-6.webp" alt="">
+                            <span>Hyrum Keddington</span>
+                        </div>
+                        <div class="stars-rating-wrap">
+                            <i class="lni lni-star-filled"></i>
+                            <i class="lni lni-star-filled"></i>
+                            <i class="lni lni-star-filled"></i>
+                            <i class="lni lni-star-filled"></i>
+                            <i class="lni lni-star-filled"></i>
+                        </div>
+                    </div>
+                    <div class="testimonial-feedback">
+                        <p>The first program to get me in the groove cos it gave me everything I needed to get started,
+                            including a menu and a
+                            grocery list.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Section  -->
+    <section class="socials">
+        <div class="social-container">
+            <span class="follow-text">Follow us</span>
+            <p class="testimonial-para-sm">to skyrocket your result!</p>
+            <div class="social-links">
+                <div class="link">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzE0NDFfNzM4KSI+CjxwYXRoIGQ9Ik0wLjAxMzY3MTkgOC4wNUMwLjAxMzY3MTkgNS4yMDI1NSAwLjAxMzY3MTkgMy43Nzg4MiAwLjU3NjYwNSAyLjY5NTEzQzEuMDUwOTggMS43ODE5MSAxLjc5NTU4IDEuMDM3MzEgMi43MDg4IDAuNTYyOTMzQzMuNzkyNDkgMCA1LjIxNjIyIDAgOC4wNjM2NyAwSDE1Ljk2MzdDMTguODExMSAwIDIwLjIzNDkgMCAyMS4zMTg1IDAuNTYyOTMzQzIyLjIzMTggMS4wMzczMSAyMi45NzY0IDEuNzgxOTEgMjMuNDUwNyAyLjY5NTEzQzI0LjAxMzcgMy43Nzg4MiAyNC4wMTM3IDUuMjAyNTUgMjQuMDEzNyA4LjA1VjE1Ljk1QzI0LjAxMzcgMTguNzk3NSAyNC4wMTM3IDIwLjIyMTIgMjMuNDUwNyAyMS4zMDQ5QzIyLjk3NjQgMjIuMjE4MSAyMi4yMzE4IDIyLjk2MjcgMjEuMzE4NSAyMy40MzcxQzIwLjIzNDkgMjQgMTguODExMSAyNCAxNS45NjM3IDI0SDguMDYzNjdDNS4yMTYyMiAyNCAzLjc5MjQ5IDI0IDIuNzA4OCAyMy40MzcxQzEuNzk1NTggMjIuOTYyNyAxLjA1MDk4IDIyLjIxODEgMC41NzY2MDUgMjEuMzA0OUMwLjAxMzY3MTkgMjAuMjIxMiAwLjAxMzY3MTkgMTguNzk3NSAwLjAxMzY3MTkgMTUuOTVWOC4wNVoiIGZpbGw9InVybCgjcGFpbnQwX3JhZGlhbF8xNDQxXzczOCkiLz4KPHBhdGggZD0iTTAuMDEzNjcxOSA4LjA1QzAuMDEzNjcxOSA1LjIwMjU1IDAuMDEzNjcxOSAzLjc3ODgyIDAuNTc2NjA1IDIuNjk1MTNDMS4wNTA5OCAxLjc4MTkxIDEuNzk1NTggMS4wMzczMSAyLjcwODggMC41NjI5MzNDMy43OTI0OSAwIDUuMjE2MjIgMCA4LjA2MzY3IDBIMTUuOTYzN0MxOC44MTExIDAgMjAuMjM0OSAwIDIxLjMxODUgMC41NjI5MzNDMjIuMjMxOCAxLjAzNzMxIDIyLjk3NjQgMS43ODE5MSAyMy40NTA3IDIuNjk1MTNDMjQuMDEzNyAzLjc3ODgyIDI0LjAxMzcgNS4yMDI1NSAyNC4wMTM3IDguMDVWMTUuOTVDMjQuMDEzNyAxOC43OTc1IDI0LjAxMzcgMjAuMjIxMiAyMy40NTA3IDIxLjMwNDlDMjIuOTc2NCAyMi4yMTgxIDIyLjIzMTggMjIuOTYyNyAyMS4zMTg1IDIzLjQzNzFDMjAuMjM0OSAyNCAxOC44MTExIDI0IDE1Ljk2MzcgMjRIOC4wNjM2N0M1LjIxNjIyIDI0IDMuNzkyNDkgMjQgMi43MDg4IDIzLjQzNzFDMS43OTU1OCAyMi45NjI3IDEuMDUwOTggMjIuMjE4MSAwLjU3NjYwNSAyMS4zMDQ5QzAuMDEzNjcxOSAyMC4yMjEyIDAuMDEzNjcxOSAxOC43OTc1IDAuMDEzNjcxOSAxNS45NVY4LjA1WiIgZmlsbD0idXJsKCNwYWludDFfcmFkaWFsXzE0NDFfNzM4KSIvPgo8cGF0aCBkPSJNMTIuMDAwNCAzLjI3Mjc0QzkuNjMwMjcgMy4yNzI3NCA5LjMzMjgyIDMuMjgzMSA4LjQwMTk0IDMuMzI1NDZDNy40NzI4OCAzLjM2ODAxIDYuODM4NzIgMy41MTUxIDYuMjgzODMgMy43MzA5MkM1LjcwOTg0IDMuOTUzODMgNS4yMjI5NSA0LjI1MjAxIDQuNzM3ODcgNC43MzcyOEM0LjI1MjQzIDUuMjIyMzcgMy45NTQyNiA1LjcwOTI4IDMuNzMwNjMgNi4yODMxQzMuNTE0MjcgNi44MzgxOSAzLjM2NyA3LjQ3MjU1IDMuMzI1MTkgOC40MDEyOEMzLjI4MzU1IDkuMzMyMTkgMy4yNzI2NCA5LjYyOTgzIDMuMjcyNjQgMTJDMy4yNzI2NCAxNC4zNzAyIDMuMjgzMTkgMTQuNjY2NyAzLjMyNTM3IDE1LjU5NzZDMy4zNjgxIDE2LjUyNjcgMy41MTUxOCAxNy4xNjA5IDMuNzMwODEgMTcuNzE1OEMzLjk1MzkgMTguMjg5OCA0LjI1MjA3IDE4Ljc3NjcgNC43MzczMyAxOS4yNjE4QzUuMjIyMjIgMTkuNzQ3MyA1LjcwOTEyIDIwLjA0NjIgNi4yODI3MyAyMC4yNjkxQzYuODM3OTkgMjAuNDg0OSA3LjQ3MjMzIDIwLjYzMiA4LjQwMTIyIDIwLjY3NDZDOS4zMzIxIDIwLjcxNjkgOS42MjkzNiAyMC43MjczIDExLjk5OTMgMjAuNzI3M0MxNC4zNjk2IDIwLjcyNzMgMTQuNjY2MSAyMC43MTY5IDE1LjU5NyAyMC42NzQ2QzE2LjUyNjEgMjAuNjMyIDE3LjE2MSAyMC40ODQ5IDE3LjcxNjIgMjAuMjY5MUMxOC4yOSAyMC4wNDYyIDE4Ljc3NjIgMTkuNzQ3MyAxOS4yNjExIDE5LjI2MThDMTkuNzQ2NSAxOC43NzY3IDIwLjA0NDcgMTguMjg5OCAyMC4yNjgzIDE3LjcxNkMyMC40ODI4IDE3LjE2MDkgMjAuNjMwMSAxNi41MjY2IDIwLjY3MzggMTUuNTk3OEMyMC43MTU2IDE0LjY2NjkgMjAuNzI2NSAxNC4zNzAyIDIwLjcyNjUgMTJDMjAuNzI2NSA5LjYyOTgzIDIwLjcxNTYgOS4zMzIzNyAyMC42NzM4IDguNDAxNDZDMjAuNjMwMSA3LjQ3MjM3IDIwLjQ4MjggNi44MzgxOSAyMC4yNjgzIDYuMjgzMjhDMjAuMDQ0NyA1LjcwOTI4IDE5Ljc0NjUgNS4yMjIzNyAxOS4yNjExIDQuNzM3MjhDMTguNzc1NiA0LjI1MTgzIDE4LjI5MDIgMy45NTM2NCAxNy43MTU3IDMuNzMwOTJDMTcuMTU5MyAzLjUxNTEgMTYuNTI0OCAzLjM2ODAxIDE1LjU5NTcgMy4zMjU0NkMxNC42NjQ4IDMuMjgzMSAxNC4zNjg1IDMuMjcyNzQgMTEuOTk3NyAzLjI3Mjc0SDEyLjAwMDRaTTExLjIxNzUgNC44NDU0NkMxMS40NDk5IDQuODQ1MSAxMS43MDkxIDQuODQ1NDYgMTIuMDAwNCA0Ljg0NTQ2QzE0LjMzMDUgNC44NDU0NiAxNC42MDY3IDQuODUzODMgMTUuNTI2OCA0Ljg5NTY0QzE2LjM3NzcgNC45MzQ1NSAxNi44Mzk1IDUuMDc2NzQgMTcuMTQ3MSA1LjE5NjE5QzE3LjU1NDQgNS4zNTQzNyAxNy44NDQ3IDUuNTQzNDYgMTguMTUgNS44NDg5MkMxOC40NTU1IDYuMTU0MzcgMTguNjQ0NSA2LjQ0NTI4IDE4LjgwMzEgNi44NTI1NUMxOC45MjI1IDcuMTU5ODMgMTkuMDY0OSA3LjYyMTY0IDE5LjEwMzYgOC40NzI1NUMxOS4xNDU0IDkuMzkyNTUgMTkuMTU0NSA5LjY2ODkyIDE5LjE1NDUgMTEuOTk4QzE5LjE1NDUgMTQuMzI3MSAxOS4xNDU0IDE0LjYwMzUgMTkuMTAzNiAxNS41MjM1QzE5LjA2NDcgMTYuMzc0NCAxOC45MjI1IDE2LjgzNjIgMTguODAzMSAxNy4xNDM1QzE4LjY0NDkgMTcuNTUwNyAxOC40NTU1IDE3Ljg0MDcgMTguMTUgMTguMTQ2QzE3Ljg0NDYgMTguNDUxNSAxNy41NTQ2IDE4LjY0MDYgMTcuMTQ3MSAxOC43OTg3QzE2LjgzOTkgMTguOTE4NyAxNi4zNzc3IDE5LjA2MDYgMTUuNTI2OCAxOS4wOTk1QzE0LjYwNjggMTkuMTQxMyAxNC4zMzA1IDE5LjE1MDQgMTIuMDAwNCAxOS4xNTA0QzkuNjcwMDkgMTkuMTUwNCA5LjM5MzkxIDE5LjE0MTMgOC40NzM5NCAxOS4wOTk1QzcuNjIzMDYgMTkuMDYwMiA3LjE2MTI1IDE4LjkxOCA2Ljg1MzQ0IDE4Ljc5ODZDNi40NDYxOCAxOC42NDA0IDYuMTU1MjggMTguNDUxMyA1Ljg0OTg0IDE4LjE0NThDNS41NDQzOSAxNy44NDA0IDUuMzU1MzEgMTcuNTUwMiA1LjE5Njc3IDE3LjE0MjdDNS4wNzczMiAxNi44MzU1IDQuOTM0OTYgMTYuMzczNiA0Ljg5NjIzIDE1LjUyMjdDNC44NTQ0MSAxNC42MDI3IDQuODQ2MDUgMTQuMzI2NCA0Ljg0NjA1IDExLjk5NThDNC44NDYwNSA5LjY2NTI4IDQuODU0NDEgOS4zOTAzNyA0Ljg5NjIzIDguNDcwMzdDNC45MzUxNCA3LjYxOTQ2IDUuMDc3MzIgNy4xNTc2NCA1LjE5Njc3IDYuODUwMDFDNS4zNTQ5NCA2LjQ0Mjc0IDUuNTQ0MzkgNi4xNTE4MyA1Ljg0OTg0IDUuODQ2MzdDNi4xNTUyOCA1LjU0MDkyIDYuNDQ2MTggNS4zNTE4MyA2Ljg1MzQ0IDUuMTkzMjhDNy4xNjEwNyA1LjA3MzI4IDcuNjIzMDYgNC45MzE0NiA4LjQ3Mzk0IDQuODkyMzdDOS4yNzkwMSA0Ljg1NjAxIDkuNTkxIDQuODQ1MSAxMS4yMTc1IDQuODQzMjhWNC44NDU0NlpNMTYuNjU4OCA2LjI5NDU1QzE2LjA4MDYgNi4yOTQ1NSAxNS42MTE1IDYuNzYzMSAxNS42MTE1IDcuMzQxNDZDMTUuNjExNSA3LjkxOTY0IDE2LjA4MDYgOC4zODg3NCAxNi42NTg4IDguMzg4NzRDMTcuMjM2OSA4LjM4ODc0IDE3LjcwNiA3LjkxOTY0IDE3LjcwNiA3LjM0MTQ2QzE3LjcwNiA2Ljc2MzI4IDE3LjIzNjkgNi4yOTQxOSAxNi42NTg4IDYuMjk0MTlWNi4yOTQ1NVpNMTIuMDAwNCA3LjUxODE5QzkuNTI1MzYgNy41MTgxOSA3LjUxODcgOS41MjQ5MiA3LjUxODcgMTJDNy41MTg3IDE0LjQ3NTEgOS41MjUzNiAxNi40ODA5IDEyLjAwMDQgMTYuNDgwOUMxNC40NzU0IDE2LjQ4MDkgMTYuNDgxMyAxNC40NzUxIDE2LjQ4MTMgMTJDMTYuNDgxMyA5LjUyNDkyIDE0LjQ3NTIgNy41MTgxOSAxMi4wMDAyIDcuNTE4MTlIMTIuMDAwNFpNMTIuMDAwNCA5LjA5MDkyQzEzLjYwNjkgOS4wOTA5MiAxNC45MDk0IDEwLjM5MzMgMTQuOTA5NCAxMkMxNC45MDk0IDEzLjYwNjYgMTMuNjA2OSAxNC45MDkxIDEyLjAwMDQgMTQuOTA5MUMxMC4zOTM3IDE0LjkwOTEgOS4wOTEzOCAxMy42MDY2IDkuMDkxMzggMTJDOS4wOTEzOCAxMC4zOTMzIDEwLjM5MzcgOS4wOTA5MiAxMi4wMDA0IDkuMDkwOTJaIiBmaWxsPSJ3aGl0ZSIvPgo8L2c+CjxkZWZzPgo8cmFkaWFsR3JhZGllbnQgaWQ9InBhaW50MF9yYWRpYWxfMTQ0MV83MzgiIGN4PSIwIiBjeT0iMCIgcj0iMSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIGdyYWRpZW50VHJhbnNmb3JtPSJ0cmFuc2xhdGUoNi4zODg3IDI1Ljg0ODUpIHJvdGF0ZSgtOTApIHNjYWxlKDIzLjc4NTggMjIuMTIyNikiPgo8c3RvcCBzdG9wLWNvbG9yPSIjRkZERDU1Ii8+CjxzdG9wIG9mZnNldD0iMC4xIiBzdG9wLWNvbG9yPSIjRkZERDU1Ii8+CjxzdG9wIG9mZnNldD0iMC41IiBzdG9wLWNvbG9yPSIjRkY1NDNFIi8+CjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI0M4MzdBQiIvPgo8L3JhZGlhbEdyYWRpZW50Pgo8cmFkaWFsR3JhZGllbnQgaWQ9InBhaW50MV9yYWRpYWxfMTQ0MV83MzgiIGN4PSIwIiBjeT0iMCIgcj0iMSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIGdyYWRpZW50VHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTQuMDA2NDYgMS43Mjg5Mikgcm90YXRlKDc4LjY4MDYpIHNjYWxlKDEwLjYzMjMgNDMuODI3KSI+CjxzdG9wIHN0b3AtY29sb3I9IiMzNzcxQzgiLz4KPHN0b3Agb2Zmc2V0PSIwLjEyOCIgc3RvcC1jb2xvcj0iIzM3NzFDOCIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM2NjAwRkYiIHN0b3Atb3BhY2l0eT0iMCIvPgo8L3JhZGlhbEdyYWRpZW50Pgo8Y2xpcFBhdGggaWQ9ImNsaXAwXzE0NDFfNzM4Ij4KPHJlY3Qgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiBmaWxsPSJ3aGl0ZSIvPgo8L2NsaXBQYXRoPgo8L2RlZnM+Cjwvc3ZnPgo="
+                        alt="instagram">
+                </div>
+                <div class="link">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAgOC4wNUMwIDUuMjAyNTUgMCAzLjc3ODgyIDAuNTYyOTMzIDIuNjk1MTNDMS4wMzczMSAxLjc4MTkxIDEuNzgxOTEgMS4wMzczMSAyLjY5NTEzIDAuNTYyOTMzQzMuNzc4ODIgMCA1LjIwMjU1IDAgOC4wNSAwSDE1Ljk1QzE4Ljc5NzUgMCAyMC4yMjEyIDAgMjEuMzA0OSAwLjU2MjkzM0MyMi4yMTgxIDEuMDM3MzEgMjIuOTYyNyAxLjc4MTkxIDIzLjQzNzEgMi42OTUxM0MyNCAzLjc3ODgyIDI0IDUuMjAyNTUgMjQgOC4wNVYxNS45NUMyNCAxOC43OTc1IDI0IDIwLjIyMTIgMjMuNDM3MSAyMS4zMDQ5QzIyLjk2MjcgMjIuMjE4MSAyMi4yMTgxIDIyLjk2MjcgMjEuMzA0OSAyMy40MzcxQzIwLjIyMTIgMjQgMTguNzk3NSAyNCAxNS45NSAyNEg4LjA1QzUuMjAyNTUgMjQgMy43Nzg4MiAyNCAyLjY5NTEzIDIzLjQzNzFDMS43ODE5MSAyMi45NjI3IDEuMDM3MzEgMjIuMjE4MSAwLjU2MjkzMyAyMS4zMDQ5QzAgMjAuMjIxMiAwIDE4Ljc5NzUgMCAxNS45NVY4LjA1WiIgZmlsbD0idXJsKCNwYWludDBfbGluZWFyXzE0NDFfNzM5KSIvPgo8cGF0aCBkPSJNMTYuNjY2NyAxNS4zMzMzTDE3LjIgMTJIMTRWOS42NjY2NkMxNCA4LjczMzMyIDE0LjMzMzMgNy45OTk5OSAxNS44IDcuOTk5OTlIMTcuMzMzM1Y0LjkzMzMyQzE2LjQ2NjcgNC43OTk5OSAxNS41MzMzIDQuNjY2NjYgMTQuNjY2NyA0LjY2NjY2QzExLjkzMzMgNC42NjY2NiAxMCA2LjMzMzMyIDEwIDkuMzMzMzJWMTJIN1YxNS4zMzMzSDEwVjI0QzExLjMzMzMgMjQgMTIuNjY2NyAyNCAxNCAyNFYxNS4zMzMzSDE2LjY2NjdaIiBmaWxsPSJ3aGl0ZSIvPgo8ZGVmcz4KPGxpbmVhckdyYWRpZW50IGlkPSJwYWludDBfbGluZWFyXzE0NDFfNzM5IiB4MT0iMTIiIHkxPSIyMy4yOTg4IiB4Mj0iMTIiIHkyPSIwIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CjxzdG9wIHN0b3AtY29sb3I9IiMwMDYyRTAiLz4KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMTlBRkZGIi8+CjwvbGluZWFyR3JhZGllbnQ+CjwvZGVmcz4KPC9zdmc+Cg=="
+                        alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer  -->
+    <section class="footer">
+        <div class="mini-footer-1">
+            <p>Any questions? We're here to help.</p>
+        </div>
+        <div class="support-mail">
+            <a href="mailto:support@madmuscles.com"><i class="lni lni-envelope"></i>support@madmuscles.com</a>
+        </div>
+    </section>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function () {
+
+
+            $('.btn_between').click(function (e) {
+                // e.preventDefault();
+                $('.menu-1').addClass('hidden');
+                $('.menu-2').removeClass('hidden');
+            })
+
+            $('.back-menu').click(function (e) {
+                // e.preventDefault();
+                $('.menu-1').removeClass('hidden');
+                $('.menu-2').addClass('hidden');
+            })
+
+            let account = 1;
+            $('.btn_account').click(function (e) {
+                e.preventDefault();
+                account++;
+                let per = 33.333;
+                per = account * per;
+
+                $('.input_group .form-group').each(function () {
+                    $(this).addClass('step');
+                })
+                $(`.account-${account}`).removeClass('step');
+                $('.o-bar').css('--o', `${per}%`);
+
+                if (account > 3) {
+                    alert("PLan Creation");
+                    location.reload();
+                }
+
+            })
+
+            let like = 1;
+            $('.btn_like').click(function (e) {
+                e.preventDefault();
+                like++;
+                $('.like').each(function () {
+                    $(this).addClass('hidden');
+                })
+                $(`.img-${like}`).removeClass('hidden');
+                if (like >= 6) {
+                    $('.btn_hidden').trigger('click');
+                }
+            })
+
+            $('.label_card, .checkbox-box').click(function (e) {
+                e.preventDefault();
+                $(this).parent().find('.checkbox-box').each(function () {
+                    $(this).removeClass('active');
+                    $(this).find('input').attr('checked', false);
+                })
+                $(this).toggleClass('active');
+                $(this).find('input').attr('checked', $(this).hasClass('active') ? true : false);
+
+            })
+            $('.btn_menu').click(function (e) {
+                e.preventDefault();
+                $('.right-menu').fadeIn('slow').css('display', 'flex');
+            })
+            $('.close-menu').click(function (e) {
+                e.preventDefault();
+                $('.right-menu').fadeOut('slow');
+            })
+
+
+
+            $('.body_card').click(function (e) {
+                e.preventDefault();
+                $('.body_card').each(function () {
+                    $(this).removeClass('active');
+                })
+                $(this).addClass('active');
+            })
+
+            let step = 1;
+
+            $('.body_card, .btn_continue, .btn_hidden').click(function () {
+                let per = 4.1;
+                per = per * step;
+                step++;
+                $('.count').text(`${step}/24`);
+                if (step == 4 || step == 11 || step == 12 || step == 15) {
+                    $('body').css({
+                        'background-image': "url('assets/img/table_50.png')",
+                        'background-color': "none",
+                    })
+                    $('.bar_container').fadeOut('slow').removeAttr('style');
+                }
+                else if (step == 23) {
+                    $('.bar_container').fadeOut('slow');
+                    $('body').css({
+                        'background-image': "none",
+                        'background-color': "#121212",
+                    })
+                }
+                else if (step > 1) {
+                    $('.bar_container').fadeIn('slow').css('display', 'flex');
+                    $('body').css({
+                        'background-image': "none",
+                        'background-color': "#121212",
+                    })
+                }
+                else {
+                    $('.bar_container').fadeOut('slow').removeAttr('style');
+                    $('body').css({
+                        'background-image': "url('assets/img/table.png')",
+                        'background-color': "none",
+                    })
+                }
+                $('.bar').css('--bar', `${per}%`);
+                $('.container').each(function () {
+                    $(this).addClass('step').removeAttr('style');
+                })
+                $(`.step-${step}`).fadeIn('slow');
+            })
+
+            $('.btn_back').click(function (e) {
+                e.preventDefault();
+                step--;
+                let per = 4.1;
+                per = per * (step - 1);
+                $('.count').text(`${step}/24`);
+                if (step > 1) {
+                    $('.bar_container').fadeIn('slow').css('display', 'flex');
+                    $('body').css({
+                        'background-image': "none",
+                        'background-color': "#121212",
+                    })
+                }
+                else {
+                    $('.bar_container').fadeOut('slow').removeAttr('style');
+                    $('body').css({
+                        'background-image': "url('assets/img/table.png')",
+                        'background-color': "none",
+                    })
+                }
+                $('.bar').css('--bar', `${per}%`);
+                $('.container').each(function () {
+                    $(this).addClass('step').removeAttr('style');
+                })
+                $(`.step-${step}`).fadeIn('slow');
+
+            })
+
+            $('.measure').click(function (e) {
+                e.preventDefault();
+                $('.measure').each(function () {
+                    $(this).removeClass('active');
+                })
+                $(this).addClass('active');
+                $('.unit').text($(this).text());
+            })
+            $('.weight').click(function (e) {
+                e.preventDefault();
+                $('.weight').each(function () {
+                    $(this).removeClass('active');
+                })
+                $(this).addClass('active');
+                $('.w-unit').text($(this).text());
+            })
+
+        })
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.testimonial-main-wrap').slick({
+                dots: false,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                            infinite: true,
+                            dots: false
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+</body>
+
+</html>
