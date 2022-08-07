@@ -16,98 +16,6 @@ function initCards(card, index) {
 
 initCards();
 
-// allCards.forEach(function (el) {
-//   var hammertime = new Hammer(el);
-
-//   hammertime.on("pan", function (event) {
-//     el.classList.add("moving");
-//   });
-
-//   hammertime.on("pan", function (event) {
-//     if (event.deltaX === 0) return;
-//     if (event.center.x === 0 && event.center.y === 0) return;
-
-//     const isTopGesture = Math.abs(event.deltaX) < 100 && event.deltaY < 0;
-
-//     tinderContainer.classList.remove("tinder_yes");
-//     tinderContainer.classList.remove("tinder_nope");
-//     tinderContainer.classList.remove("tinder_top");
-
-//     tinderContainer.classList.toggle("tinder_yes", event.deltaX > 0);
-//     tinderContainer.classList.toggle("tinder_nope", event.deltaX < 0);
-//     if (isTopGesture) {
-//       tinderContainer.classList.remove("tinder_yes");
-//       tinderContainer.classList.remove("tinder_nope");
-//       tinderContainer.classList.add("tinder_top");
-//     }
-
-//     var xMulti = event.deltaX * 0.03;
-//     var yMulti = event.deltaY / 80;
-
-//     var style = window.getComputedStyle(event.target);
-//     var matrix = new WebKitCSSMatrix(style.transform);
-//     console.log("translateX: ", matrix.m41);
-
-//     // var rotate = event.srcEvent.clientX/tinderContainer.offsetWidth * 20;
-//     var rotate = (matrix.m41 / tinderContainer.offsetWidth / 2) * 60;
-
-//     console.log("event.center.x:", event.center.x);
-//     console.log("event.deltaX:", event.deltaX);
-
-//     event.target.style.transform =
-//       "translate(" +
-//       event.deltaX +
-//       "px, " +
-//       event.deltaY +
-//       "px) rotate(" +
-//       rotate +
-//       "deg)";
-//   });
-
-//   hammertime.on("panend", function (event) {
-//     el.classList.remove("moving");
-//     tinderContainer.classList.remove("tinder_yes");
-//     tinderContainer.classList.remove("tinder_nope");
-//     tinderContainer.classList.remove("tinder_top");
-
-//     var moveOutWidth = document.body.clientWidth;
-//     var keep = Math.abs(event.deltaX) < 80 || Math.abs(event.velocityX) < 0.5;
-
-//     event.target.classList.toggle("removed", !keep);
-
-//     if (keep) {
-//       event.target.style.transform = "";
-//     } else {
-//       var endX = Math.max(
-//         Math.abs(event.velocityX) * moveOutWidth,
-//         moveOutWidth
-//       );
-//       var toX = event.deltaX > 0 ? endX : -endX;
-//       var endY = Math.abs(event.velocityY) * moveOutWidth;
-//       var toY = event.deltaY > 0 ? endY : -endY;
-//       var xMulti = event.deltaX * 0.03;
-//       var yMulti = event.deltaY / 80;
-
-//       var style = window.getComputedStyle(event.target);
-//       var matrix = new WebKitCSSMatrix(style.transform);
-//       console.log("translateX: ", matrix.m41);
-
-//       // var rotate = event.srcEvent.clientX/tinderContainer.offsetWidth * 20;
-//       var rotate = (matrix.m41 / tinderContainer.offsetWidth / 2) * 60;
-
-//       event.target.style.transform =
-//         "translate(" +
-//         toX +
-//         "px, " +
-//         (toY + event.deltaY) +
-//         "px) rotate(" +
-//         rotate +
-//         "deg)";
-//       initCards();
-//     }
-//   });
-// });
-
 function createButtonListener(id) {
   return function (event) {
     var cards = document.querySelectorAll(".tinder--card:not(.removed)");
@@ -148,3 +56,197 @@ var topBtn = document.getElementById("top");
 yesBtn.addEventListener("click", yesListener);
 nopeBtn.addEventListener("click", nopeListener);
 topBtn.addEventListener("click", topListener);
+
+// date format
+
+var date = document.getElementById("date");
+
+function checkValue(str, max) {
+  if (str.charAt(0) !== "0" || str == "00") {
+    var num = parseInt(str);
+    if (isNaN(num) || num <= 0 || num > max) num = 1;
+    str =
+      num > parseInt(max.toString().charAt(0)) && num.toString().length == 1
+        ? "0" + num
+        : num.toString();
+  }
+  return str;
+}
+
+date.addEventListener("input", function (e) {
+  this.type = "text";
+  var input = this.value;
+  if (/\D\/$/.test(input)) input = input.substr(0, input.length - 3);
+  var values = input.split("/").map(function (v) {
+    return v.replace(/\D/g, "");
+  });
+  if (values[0]) values[0] = checkValue(values[0], 31);
+  if (values[1]) values[1] = checkValue(values[1], 12);
+  var output = values.map(function (v, i) {
+    return v.length == 2 && i < 2 ? v + " / " : v;
+  });
+  this.value = output.join("").substr(0, 14);
+});
+
+date.addEventListener("blur", function (e) {
+  this.type = "text";
+  var input = this.value;
+  var values = input.split("/").map(function (v, i) {
+    return v.replace(/\D/g, "");
+  });
+  var output = "";
+
+  if (values.length == 3) {
+    var year =
+      values[2].length !== 4 ? parseInt(values[2]) + 2000 : parseInt(values[2]);
+    var month = parseInt(values[0]) - 1;
+    var day = parseInt(values[1]);
+    var d = new Date(year, month, day);
+    if (!isNaN(d)) {
+      document.getElementById("result").innerText = d.toString();
+      var dates = [d.getMonth() + 1, d.getDate(), d.getFullYear()];
+      output = dates
+        .map(function (v) {
+          v = v.toString();
+          return v.length == 1 ? "0" + v : v;
+        })
+        .join(" / ");
+    }
+  }
+  this.value = output;
+});
+
+// Radio Validation
+
+var dueId1 = document.getElementById("dueId1");
+var dueId2 = document.getElementById("dueId2");
+var dueId3 = document.getElementById("dueId3");
+var dueId4 = document.getElementById("dueId4");
+var radioDur = document.getElementsByClassName("radio-dur");
+var dur1 = document.getElementById("dur-1");
+var dur2 = document.getElementById("dur-2");
+var dur3 = document.getElementById("dur-3");
+var dur4 = document.getElementById("dur-4");
+
+radioDur.checked = true;
+
+function chk() {
+  if (radioDur.checked) {
+    dur1.classList.remove("hidden-imp");
+    dur2.classList.add("hidden-imp");
+    dur3.classList.add("hidden-imp");
+    dur4.classList.add("hidden-imp");
+    console.log("done");
+  }
+}
+
+function chk2() {
+  if (radioDur.checked) {
+    dur2.classList.remove("hidden-imp");
+    dur1.classList.add("hidden-imp");
+    dur3.classList.add("hidden-imp");
+    dur4.classList.add("hidden-imp");
+    console.log("done");
+  }
+}
+
+function chk3() {
+  if (radioDur.checked) {
+    dur3.classList.remove("hidden-imp");
+    dur1.classList.add("hidden-imp");
+    dur2.classList.add("hidden-imp");
+    dur4.classList.add("hidden-imp");
+    console.log("done");
+  }
+}
+
+function chk4() {
+  if (radioDur.checked) {
+    dur4.classList.remove("hidden-imp");
+    dur1.classList.add("hidden-imp");
+    dur2.classList.add("hidden-imp");
+    dur3.classList.add("hidden-imp");
+    console.log("done");
+  }
+}
+
+dueId1.addEventListener("click", chk);
+dueId2.addEventListener("click", chk2);
+dueId3.addEventListener("click", chk3);
+dueId4.addEventListener("click", chk4);
+
+// Radio Validation 2
+
+var drinkId1 = document.getElementById("drinkId1");
+var drinkId2 = document.getElementById("drinkId2");
+var drinkId3 = document.getElementById("drinkId3");
+var drinkId4 = document.getElementById("drinkId4");
+var drinkId5 = document.getElementById("drinkId5");
+var radioDrink = document.getElementsByClassName("radio-drink");
+var drink1 = document.getElementById("drink-1");
+var drink2 = document.getElementById("drink-2");
+var drink3 = document.getElementById("drink-3");
+var drink4 = document.getElementById("drink-4");
+var drink5 = document.getElementById("drink-5");
+
+radioDrink.checked = true;
+
+function chkDrink() {
+  if (radioDrink.checked) {
+    drink1.classList.remove("hidden-imp");
+    drink2.classList.add("hidden-imp");
+    drink3.classList.add("hidden-imp");
+    drink4.classList.add("hidden-imp");
+    console.log("done");
+    drink5.classList.add("hidden-imp");
+  }
+}
+
+function chkDrink2() {
+  if (radioDrink.checked) {
+    drink2.classList.remove("hidden-imp");
+    drink1.classList.add("hidden-imp");
+    drink3.classList.add("hidden-imp");
+    drink4.classList.add("hidden-imp");
+    console.log("done");
+    drink5.classList.add("hidden-imp");
+  }
+}
+
+function chkDrink3() {
+  if (radioDrink.checked) {
+    drink3.classList.remove("hidden-imp");
+    drink1.classList.add("hidden-imp");
+    drink2.classList.add("hidden-imp");
+    drink4.classList.add("hidden-imp");
+    console.log("done");
+    drink5.classList.add("hidden-imp");
+  }
+}
+
+function chkDrink4() {
+  if (radioDrink.checked) {
+    drink4.classList.remove("hidden-imp");
+    drink1.classList.add("hidden-imp");
+    drink2.classList.add("hidden-imp");
+    drink3.classList.add("hidden-imp");
+    console.log("done");
+    drink5.classList.add("hidden-imp");
+  }
+}
+function chkDrink5() {
+  if (radioDrink.checked) {
+    drink5.classList.remove("hidden-imp");
+    drink1.classList.add("hidden-imp");
+    drink2.classList.add("hidden-imp");
+    drink3.classList.add("hidden-imp");
+    console.log("done");
+    drink4.classList.add("hidden-imp");
+  }
+}
+
+drinkId1.addEventListener("click", chkDrink);
+drinkId2.addEventListener("click", chkDrink2);
+drinkId3.addEventListener("click", chkDrink3);
+drinkId4.addEventListener("click", chkDrink4);
+drinkId5.addEventListener("click", chkDrink5);
